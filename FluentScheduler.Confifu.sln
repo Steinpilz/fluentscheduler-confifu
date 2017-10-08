@@ -1,15 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".sln", ".sln", "{CC408C3F-1C0B-498C-A043-DF8DD3F7FDE8}"
+	ProjectSection(SolutionItems) = preProject
+		.env = .env
+		.gitignore = .gitignore
+		build.bat = build.bat
+		scripts\build.fsx = scripts\build.fsx
+		paket.dependencies = paket.dependencies
+		paket.lock = paket.lock
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{401151C6-BE22-4B68-AFE7-A9DDB9665D76}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentScheduler.Confifu", "src\app\FluentScheduler.Confifu\FluentScheduler.Confifu.csproj", "{9C54B9D4-BC0D-4571-9285-3387A91E81D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentScheduler.Confifu.Tests", "src\test\FluentScheduler.Confifu.Tests\FluentScheduler.Confifu.Tests.csproj", "{C77A08C8-46B8-49C5-9BAC-DC19B76B5A7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentScheduler.Confifu.Tests", "src\test\FluentScheduler.Confifu.Tests\FluentScheduler.Confifu.Tests.csproj", "{C77A08C8-46B8-49C5-9BAC-DC19B76B5A7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,5 +39,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C77A08C8-46B8-49C5-9BAC-DC19B76B5A7B} = {401151C6-BE22-4B68-AFE7-A9DDB9665D76}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2AE32E8C-96AB-43D2-9837-694AE0432912}
 	EndGlobalSection
 EndGlobal

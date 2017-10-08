@@ -16,10 +16,7 @@ namespace FluentScheduler.Confifu.Tests
         public void it_does_not_smoke()
         {
             var appConfig = CreateAppConfig();
-            appConfig.UseFluentScheduler(r =>
-            {
-
-            });
+            appConfig.UseFluentScheduler();
         }
 
         [Fact]
