@@ -36,6 +36,25 @@ namespace FluentScheduler.Confifu.Tests
             Assert.True(itIsWorking);
         }
         
+        [Fact]
+        public void it_schedules_lazy_and_run_task()
+        {
+            var itIsWorking = false;
+            var appConfig = CreateAppConfig();
+            appConfig.UseFluentScheduler(c =>
+            {
+                c.ConfigureLazy(r => {
+                    r.Schedule(() => {
+                        itIsWorking = true;
+                    }).ToRunNow();
+                });
+            });
+            appConfig.GetAppRunner()?.Invoke();
+
+            Thread.Sleep(100);
+            Assert.True(itIsWorking);
+        }
+
         private static AppConfig CreateAppConfig()
         {
             var appConfig = new AppConfig();

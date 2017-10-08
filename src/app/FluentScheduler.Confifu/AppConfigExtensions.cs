@@ -21,8 +21,7 @@ namespace FluentScheduler.Confifu
                 appConfig.AddAppRunnerAfter(() =>
                 {
                     var actualRegistry = Registry;
-                    if (RegistryConfig != null)
-                        RegistryConfig(actualRegistry);
+                    RegistryConfig?.Invoke(actualRegistry);
 
                     var serviceProvider = appConfig.GetServiceProvider();
                     if (serviceProvider != null)
@@ -32,7 +31,7 @@ namespace FluentScheduler.Confifu
                 });
             }
 
-            void AddLazyConfiguration(Action<Registry> registryConfig)
+            public void ConfigureLazy(Action<Registry> registryConfig)
             {
                 RegistryConfig += registryConfig;
             }
