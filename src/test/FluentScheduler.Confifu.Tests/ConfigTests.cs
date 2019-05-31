@@ -24,9 +24,9 @@ namespace FluentScheduler.Confifu.Tests
         {
             var itIsWorking = false;
             var appConfig = CreateAppConfig();
-            appConfig.UseFluentScheduler(r =>
+            appConfig.UseFluentScheduler(c =>
             {
-                r.Schedule(() => {
+                c.Registry.Schedule(() => {
                     itIsWorking = true;
                 }).ToRunNow();
             });

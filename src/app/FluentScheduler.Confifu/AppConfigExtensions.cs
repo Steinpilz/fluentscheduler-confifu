@@ -44,24 +44,11 @@ namespace FluentScheduler.Confifu
             return appConfig;
         }
 
-        [Obsolete("Will be removed in the next majox relese. Use UseFluentScheduler(Action<Config>) method instead")]
-        public static IAppConfig UseFluentScheduler(this IAppConfig appConfig, Action<Registry> registryConfig)
-            => appConfig.UseFluentScheduler(c =>
-            {
-                registryConfig(c.Registry);
-            });
-
         public static Registry GetFluentSchedulerRegistry(this IAppConfig appConfig)
             => appConfig.EnsureConfig().Registry;
 
         static Config EnsureConfig(this IAppConfig appConfig)
             => appConfig.EnsureConfig<Config>("FluentScheduler", c => c.Init(appConfig));
-
-        [Obsolete("Doesn't do anything, use UseFluentSchduler (Action<Config>) method to change Registry")]
-        public static IAppConfig SetFluentSchedulerRegistry(this IAppConfig appConfig, Registry registry)
-        {
-            return appConfig;
-        }
     }
 
     class ServiceProviderJobFactory : IJobFactory
