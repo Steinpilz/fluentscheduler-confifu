@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".sln", ".sln", "{CC408C3F-1
 		.gitignore = .gitignore
 		build.bat = build.bat
 		scripts\build.fsx = scripts\build.fsx
-		paket.dependencies = paket.dependencies
-		paket.lock = paket.lock
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{401151C6-BE22-4B68-AFE7-A9DDB9665D76}"
