@@ -9,6 +9,7 @@
     <PackageId>FluentScheduler.Confifu</PackageId>
     <PackageTags>confifu;configuration;.net;fluentscheduler</PackageTags>
     <PackageProjectUrl>https://github.com/steinpilz/fluentscheduler-confifu</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
