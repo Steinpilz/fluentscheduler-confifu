@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FluentScheduler.Confifu
+﻿namespace FluentScheduler.Confifu
 {
     internal class GenericRegistry : Registry
     {
